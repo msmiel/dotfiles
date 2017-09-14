@@ -28,10 +28,10 @@ defaults write com.apple.screencapture type -string "png"
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: show status bar
+# Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Finder: show path bar
+# Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Hide icons for hard drives, servers, and removable media on the desktop
