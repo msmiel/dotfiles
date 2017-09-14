@@ -1,6 +1,5 @@
 # Taps
 tap "caskroom/cask"
-tap "homebrew/bundle"
 tap "homebrew/core"
 
 # Make sure apps get installed in system Applications dir
