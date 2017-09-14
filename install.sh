@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Setting up your Mac, Mavreen"
+echo "Setting up your Mac, Mavreen..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
