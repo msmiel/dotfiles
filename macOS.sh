@@ -60,7 +60,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Safari & WebKit                                                             #
 ###############################################################################
 
-# Set Safari’s home page to `Start.io/graphei`
+# Set Safari’s home page to `start.io/graphei`
 defaults write com.apple.Safari HomePage -string "http://www.start.io/graphei"
 
 # Enable Safari’s debug menu
@@ -95,3 +95,13 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
+###############################################################################
+# Mac App Store                                                               #
+###############################################################################
+
+# Turn on app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
+
+# Allow the App Store to reboot machine on macOS updates
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
