@@ -37,8 +37,9 @@ cask "focus"
 cask "alfred"
 cask "atom"
 cask "slack"
+cask "google-chrome"
 
-# App Store Applications
+# App Store Purchases
 mas "1Password", id: 443987910
 mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
