@@ -14,6 +14,10 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# Save screenshots to Dropbox/Screenshots & save as PNG format
+defaults write com.apple.screencapture location -string "$HOME/Dropbox/Screenshots"
+defaults write com.apple.screencapture type -string "png"
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -56,7 +60,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Safari & WebKit                                                             #
 ###############################################################################
 
-# Set Safari’s home page to `Start.io` for faster loading
+# Set Safari’s home page to `Start.io/graphei`
 defaults write com.apple.Safari HomePage -string "http://www.start.io/graphei"
 
 # Enable Safari’s debug menu
