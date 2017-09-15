@@ -22,6 +22,7 @@ brew "openssl@1.1"
 brew "pkg-config"
 brew "rbenv"
 brew "wget"
+brew "yarn"
 
 # Applications
 cask "adium"
