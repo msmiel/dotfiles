@@ -3,6 +3,7 @@
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
+echo "Setting general defaults"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -27,6 +28,7 @@ defaults write com.apple.screencapture type -string "png"
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+echo "Setting Finder defaults"
 
 # Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -49,6 +51,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 ###############################################################################
 # Dock & Dashboard                                                            #
 ###############################################################################
+echo "Setting Dock preferences"
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -56,15 +59,42 @@ defaults write com.apple.dock autohide -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
+# Sets Dock position (left, bottom, right)
+defaults write com.apple.dock orientation -string "left"
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
+echo "Setting Safari preferences"
+
+# General Settings #
 
 # Set Safari’s home page to `start.io/graphei`
 defaults write com.apple.Safari HomePage -string "http://www.start.io/graphei"
 
+# New tabs open with: Empty Page
+defaults write com.apple.Safari NewTabBehavior -int 1
+
+
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# Privacy settings #
+
+# Website use of location services
+# 0 = Deny without prompting
+# 1 = Prompt for each website once each day
+# 2 = Prompt for each website one time only
+defaults write com.apple.Safari SafariGeolocationPermissionPolicy -int 0
+
+# Do not track
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+
+# Notifications #
+
+# Don't even ask about the push notifications
+defaults write com.apple.Safari CanPromptForPushNotifications -bool false
 
 # Warn about fraudulent websites
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
@@ -81,16 +111,15 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
-# Enable “Do Not Track”
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
+echo "Setting Mail preferences"
 
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>`
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Disable inline attachments (just show the icons)
@@ -99,6 +128,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
+echo "Setting Mac App Store preferences"
 
 # Turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
