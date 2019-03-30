@@ -8,6 +8,9 @@ echo "Setting general defaults"
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
@@ -23,7 +26,13 @@ defaults write com.apple.screencapture type -string "png"
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-
+# Set language and text formats
+# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
+# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
+defaults write NSGlobalDomain AppleLanguages -array "en"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 ###############################################################################
 # Finder                                                                      #
@@ -69,9 +78,6 @@ echo "Setting Safari preferences"
 
 # General Settings #
 
-# Set Safari’s home page to `start.io/graphei`
-defaults write com.apple.Safari HomePage -string "http://www.start.io/graphei"
-
 # New tabs open with: Empty Page
 defaults write com.apple.Safari NewTabBehavior -int 1
 
@@ -104,8 +110,8 @@ defaults write com.apple.Safari WebKitPluginsEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
 
 # Disable Java
-defaults write com.apple.Safari WebKitJavaEnabled -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+defaults write com.apple.Safari WebKitJavaEnabled -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool true
 
 # Block pop-up windows
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false

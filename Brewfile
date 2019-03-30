@@ -17,7 +17,6 @@ brew "go"
 
 # Applications
 cask "adium"
-cask "spotify"
 cask "flux"
 cask "hazel"
 cask "dropbox"
