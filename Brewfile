@@ -20,6 +20,8 @@ cask "scrivener"
 cask "focus"
 cask "alfred"
 cask "slack"
+cask "1password"
+cask "fantastical"
 
 # App Store Purchases
 mas "Magnet", id: 441258766
