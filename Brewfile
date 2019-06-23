@@ -11,20 +11,15 @@ brew "git"
 brew "go"
 brew "mas"
 brew "wget"
-brew "newsboat"
-brew "shpotify"
-brew "go"
 
 # Applications
 cask "adium"
 cask "flux"
 cask "hazel"
-cask "dropbox"
 cask "scrivener"
 cask "focus"
 cask "alfred"
 cask "slack"
 
 # App Store Purchases
-mas "1Password", id: 443987910
 mas "Magnet", id: 441258766
