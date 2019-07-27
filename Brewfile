@@ -6,9 +6,7 @@ tap "homebrew/core"
 cask_args appdir: '/Applications'
 
 # Install binaries
-brew "go"
 brew "mas"
-brew "wget"
 
 # Applications
 cask "adium"
@@ -16,7 +14,6 @@ cask "flux"
 cask "hazel"
 cask "scrivener"
 cask "alfred"
-cask "slack"
 cask "1password"
 
 # App Store Purchases
