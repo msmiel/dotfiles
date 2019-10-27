@@ -9,7 +9,6 @@ cask_args appdir: '/Applications'
 brew "mas"
 
 # Applications
-cask "adium"
 cask "flux"
 cask "hazel"
 cask "scrivener"
